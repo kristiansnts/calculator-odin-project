@@ -92,6 +92,7 @@ main#app .screen {
     margin: 30px 0;
     border-radius: 8px;
     text-align: right;
+    overflow: hidden;
 }
 
 main#app .screen h1 {
