@@ -17,14 +17,32 @@ buttons.forEach(button => {
     })
 })
 
+function removeOnScreen(buttonTrigger){
+    let contents = "";
+    console.log(buttonTrigger.classList.contains('delete'))
+    if(buttonTrigger.classList.contains('delete')){
+        contents = screenText.textContent.slice(0, -1);
+        screenText.textContent = contents;
+    }
+    screenText.textContent = contents
+}
+
 const deleteButton = board.querySelector('.delete');
-deleteButton.addEventListener('click', () => {
+const resetButton = board.querySelector('.reset');
+deleteButton.addEventListener('click', (e) => {
     if(!screenText.textContent){
         return;
     }
-    const contents = screenText.textContent
-                                    .slice(0, -1);
-    screenText.textContent = contents
+    const buttonTrigger = e.target;
+    removeOnScreen(buttonTrigger)
+})
+
+resetButton.addEventListener('click', (e) => {
+    if(!screenText.textContent){
+        return;
+    }
+    const buttonTrigger = e.target;
+    removeOnScreen(buttonTrigger)
 })
 
 console.log(screenText.textContent.split(' '));
