@@ -106,3 +106,12 @@ main#app .board {
     padding: 15px;
     border-radius: 8px;
 }
+
+footer {
+    color: white;
+}
+
+footer a {
+    color: var(--triggerKey);
+    text-decoration: underline;
+}
