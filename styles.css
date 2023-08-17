@@ -98,7 +98,6 @@ main#app .screen h1 {
     font-size: 3rem;
     padding: 0 10px;
     height: 40px;
-    letter-spacing: 10px;
 }
 
 main#app .board {
