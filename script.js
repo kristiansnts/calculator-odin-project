@@ -22,7 +22,10 @@ deleteButton.addEventListener('click', () => {
     if(!screenText.textContent){
         return;
     }
-    console.log(screenText.textContent.split(' '));
+    const contents = screenText.textContent
+                                    .slice(0, -1);
+    screenText.textContent = contents
 })
 
+console.log(screenText.textContent.split(' '));
 console.log(parseFloat('.09'))
